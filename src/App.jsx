@@ -23,7 +23,7 @@ function App() {
             <Route path="/writing" element={<Blog />} />
             <Route path="/resume" element={<Resume />} />
             <Route path="/posts/:slug" element={<BlogPostContent />} />
-            <Route path="*" element={<NotFound />} />
+            {/* <Route path="*" element={<NotFound />} /> */}
           </Routes>
         </div>
       </div>
