@@ -43,9 +43,9 @@ function Projects() {
       title: "Connections",
       description: (
         <>
-          I'm an enthusiast of word puzzles like crosswords, codenames, and connections, a style of word puzzle from NYT Games about finding 4 groups of 4 words. <a href="https://connections.swellgarfo.com/game/-NxKXiGUb9kSyUsTrBvr" target="_blank" rel="noopener noreferrer">Here</a> are {" "}
-          <a href="https://connections.swellgarfo.com/game/-NxKY_Se2Gv69T3TCtIL" target="_blank" rel="noopener noreferrer">some</a> connections {" "}
-          <a href="https://connections.swellgarfo.com/game/-O2c2POhS6vPqvdN-v3D" target="_blank" rel="noopener noreferrer">puzzles</a> I constructed.
+          I'm an enthusiast of word puzzles like crosswords, codenames, and connections, a style of word puzzle from NYT Games about finding 4 groups of 4 words. <a href="https://connections.swellgarfo.com/game/-NxKXiGUb9kSyUsTrBvr" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>Here</a> are {" "}
+          <a href="https://connections.swellgarfo.com/game/-NxKY_Se2Gv69T3TCtIL" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>some</a> connections {" "}
+          <a href="https://connections.swellgarfo.com/game/-O2c2POhS6vPqvdN-v3D" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>puzzles</a> I constructed.
         </>
       ),
       imageUrl: "/projects/connections.png",
@@ -59,11 +59,15 @@ function Projects() {
     //   month: "March 2024"
     // },
     {
-      title: "Hexblend",
-      description: "Another hex-themed project. This is a single/multiplayer game about blending colors that got first place at web.lab, MIT's intro to web dev class and competition. Uses MERN stack, WebSocket, and Chakra UI. Built with @evnkim and @jschen6178.",
-      imageUrl: "/projects/hexblend.png",
-      link: "https://hexblend.onrender.com/",
-      month: "January 2024"
+      "title": "Hexblend",
+      "description": (
+        <>
+          Another hex-themed project. This is a single/multiplayer game about blending colors that got first place at web.lab, MIT's intro to web dev class and competition. Uses MERN stack, WebSocket, and Chakra UI. Built with <a href="https://github.com/evnkim" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>@evnkim</a> and <a href="https://github.com/jschen6178" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>@jschen6178</a>.
+        </>
+      ),
+      "imageUrl": "/projects/hexblend.png",
+      "link": "https://hexblend.onrender.com/",
+      "month": "January 2024",
     },
     {
       title: "Israel-Palestine Sentiment Analysis",
@@ -82,7 +86,7 @@ function Projects() {
       title: "Euler Circle",
       description: (
         <>
-          While in high school, I took advanced math classes at Euler circle, where I wrote 3 expository papers (drawing mainly from other sources, but with my own explanations and some of my own proofs), detailing my learning of topics in <a href="/eulercircle/MCMC_and_the_Ising_Model.pdf" target="_blank" rel="noopener noreferrer">Markov Chains</a>, <a href="/eulercircle/The_j_function.pdf" target="_blank" rel="noopener noreferrer">Complex Analysis</a>, and <a href="/eulercircle/Singularity_Analysis.pdf" target="_blank" rel="noopener noreferrer">Generating Functions</a>.
+          While in high school, I took advanced math classes at Euler circle, where I wrote 3 expository papers (drawing mainly from other sources, but with my own explanations and some of my own proofs), detailing my learning of topics in <a href="/eulercircle/MCMC_and_the_Ising_Model.pdf" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>Markov Chains</a>, <a href="/eulercircle/The_j_function.pdf" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>Complex Analysis</a>, and <a href="/eulercircle/Singularity_Analysis.pdf" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>Generating Functions</a>.
         </>
       ),
       imageUrl: "/projects/jfunc.png",
