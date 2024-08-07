@@ -2,29 +2,36 @@ import React from 'react';
 import './Projects.css';
 
 function ProjectItem({ title, description, imageUrl, link, month }) {
+  const handleClick = (e) => {
+    if (e.target.tagName === 'A') {
+      return;
+    }
+    if (link) {
+      window.open(link, '_blank', 'noopener,noreferrer');
+    }
+  };
+
   return (
-    <a href={link} target="_blank" rel="noopener noreferrer" className="project-link">
-      <div className="project-item">
-        {imageUrl && <img src={imageUrl} alt={title} className="project-image" />}
-        <div className="project-info">
-          <h3>{title}</h3>
-          <p>{description}</p>
-          <p className="project-month">{month}</p>
-        </div>
+    <div className="project-item" onClick={handleClick} style={{cursor: link ? 'pointer' : 'default'}}>
+      {imageUrl && <img src={imageUrl} alt={title} className="project-image" />}
+      <div className="project-info">
+        <h3>{title}</h3>
+        <div className="project-description">{description}</div>
+        <p className="project-month">{month}</p>
       </div>
-    </a>
+    </div>
   );
 }
 
 function Projects() {
   const projectsData = [
-    {
-      title: "Personal Website",
-      description: "My personal website.",
-      imageUrl: "/projects/website.png",
-      link: "/projects",
-      month: "July 2024"
-    },
+    // {
+    //   title: "Personal Website",
+    //   description: "My personal website.",
+    //   imageUrl: "/projects/website.png",
+    //   link: "/projects",
+    //   month: "July 2024"
+    // },
     {
       title: "Hexhunt",
       description: "An algorithmic challenge I made for HackTimes, a series of admissions puzzles for HackMIT 2024. Good luck!",
