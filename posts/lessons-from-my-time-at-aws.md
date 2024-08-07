@@ -74,3 +74,6 @@ This makes me a bit sad, since research is so much more exciting.
 Aggressively reduce complexity every chance you get
 
 My internship at AWS has given me valuable insights into the realities of cloud computing, the importance of hands-on data analysis, and the significant challenges faced by big tech companies. While I still find research more exciting, I've gained a deeper appreciation for the complex engineering work that underlies much of our technological infrastructure. As AI continues to advance, the interplay between research and practical engineering will only become more crucial.
+
+
+grug, worse is better, worse is better is worse.
