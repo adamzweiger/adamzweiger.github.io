@@ -34,7 +34,7 @@ function Projects() {
     // },
     {
       title: "Hexhunt",
-      description: "An algorithmic challenge I made for HackTimes, a series of admissions puzzles for HackMIT 2024. Good luck!",
+      description: "An algorithmic challenge I made for HackTimes, a series of admissions puzzles for HackMIT 2024.",
       imageUrl: "/projects/hexhunt.png",
       link: "https://hacktimes.hackmit.org/",
       month: "June 2024"
