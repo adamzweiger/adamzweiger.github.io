@@ -16,7 +16,7 @@ function BlogPostContent() {
     fetch(`/posts/${slug}.md`)
       .then(response => response.text())
       .then(text => {
-        if (text.trim().startsWith('<!doctype html>')) {
+        if (text.trim().startsWith('<!doctype html>') || text.trim().startsWith('<!DOCTYPE html>')) {
           throw new Error('Page Not Found');
         }
         setContent(text);

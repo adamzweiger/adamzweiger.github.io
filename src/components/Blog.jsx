@@ -30,12 +30,12 @@ function Blog() {
     // {
     // title: "Lessons From My Time at AWS",
     // description: "What I learned from the cloud giant.",
-    // date: "2024-08-30",
+    // date: "2024-08-20",
     // readingTime: 10
     // },
     // {
-    //   title: "On Writing",
-    //   description: "My first post! Why I started writing and why it took me until now to start.",
+    //   title: "Hello World",
+    //   description: "My first post!",
     //   date: "2024-07-23",
     //   readingTime: 6
     // },
