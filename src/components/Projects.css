@@ -1,22 +1,23 @@
 /* Projects.css */
+html, body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
 .projects {
   padding: 20px;
+  width: 100%;
+  box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 .project-list {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  /* Removed:
-  overflow-y: auto;
-  max-height: 80vh;
-  */
-}
-
-.project-link {
-  text-decoration: none;
-  color: inherit;
-  display: block;
+  width: 100%;
 }
 
 .project-item {
@@ -26,6 +27,14 @@
   overflow: hidden;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.project-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
 }
 
 .project-item:hover {
@@ -37,7 +46,9 @@
   width: 340px;
   height: 212.5px;
   object-fit: cover;
+  max-width: 100%;
 }
+
 
 .project-info {
   padding: 15px;
@@ -57,4 +68,19 @@
   font-style: italic;
   color: #888;
   margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+  .project-item {
+    flex-direction: column;
+  }
+
+  .project-image {
+    width: 100%;
+    height: auto;
+  }
+
+  .project-info {
+    width: 100%;
+  }
 }

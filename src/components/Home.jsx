@@ -18,13 +18,11 @@ function Home() {
         </div>
         <div className="bio">
           <p>
-            Hey! I'm Adam, an undergrad at MIT pursuing a degree in CS (Course 6-3).
+            Hey! I'm an undergrad at MIT pursuing a degree in CS (Course 6-3).
             My background includes studying pure math and competing in math, physics, and computing olympiads during high school.
-            I've also interned as a software/ML engineer in biotech and big tech. {" "}
-            {/* For more details, check out my <Link to="/resume" style={{ textDecoration: 'none' }}>resume</Link>. */}
+            I've also interned as a software/ML engineer in biotech and big tech.
             My current focus is on algorithms and AI systems, and I'm seeking research opportunities in these areas.
-            I'm also a part of the HackMIT organizing team, hoping to support tech innovation. {" "}
-            {/* I'm easily distracted by interesting problems and love exchanging mathy puzzles with fellow enthusiasts! */}
+            I'm also a part of the HackMIT organizing team, hoping to support tech innovation.
             Outside of academics, I love bouldering, badminton, and tennis.
           </p> 
         </div>
