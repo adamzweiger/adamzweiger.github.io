@@ -141,7 +141,7 @@ Apparently, some people also had success with genetic algorithms. These repeated
 
 ## Conclusion
 
-In the end, we got 1600 total submissions for this puzzle (solvers can submit multiple times for higher scores). Out of 1500 people who accessed the HackTimes page and attempted puzzles, 100 got a score higher than 2000, and 30 of those then the same high score of **4064** with this board or one of its rotations/reflections:
+In the end, we got 1552 total submissions for this puzzle (solvers can submit multiple times for higher scores). Out of 1200 people who accessed the HackTimes page and attempted puzzles, 131 got a Hexhunt score higher than 2000. An impressive 28 of them got the same high score of **4064** with this board or one of its rotations/reflections:
 <img src="images/hexhunt_high.png" alt="4064" class="blog-image" style="width: 50%;" />
 
 There's likely no good way to prove mathematically that this is the highest scoring board without essentially doing an exhaustive search, but from the sheer number of people who tried their various techniques with many hundreds of hours of computation, and achieved the same highest score, we can be extremely confident that 4064 is the maximum possible Hexhunt score.
