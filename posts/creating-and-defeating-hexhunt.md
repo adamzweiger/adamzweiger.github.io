@@ -20,7 +20,7 @@ At first glance, the puzzle's objective isn't clear. The page allows for inputti
 
 From that and more playing around with different inputs, it can be deduced that the score is related to the set of all words that can be produced by connecting adjacent letters on the board. Writing a program that finds every such word is helpful in determining exactly what the scoring mechanism is. It's still possible to get a very high score without knowing exactly what the scoring function is, but much harder. 
 
-With enough trial and error, especially with the help of a program, it can be determined that score is likely the sum of the lengths of all words[^1] that can be produced by connecting adjacent letters.
+With enough trial and error, especially with the help of a program, it can be determined that score is likely the sum of the lengths of all words that can be produced by connecting adjacent letters.
 
 ## Inspiration
 
@@ -29,13 +29,13 @@ This puzzle was inspired by my friend and I playing a high-scoring game of Word 
 <img src="images/hexhunt_wordhunt.png" alt="Word Hunt" class="blog-image" style="width: 40%;" />
 
 
-A natural question arose: **what’s the highest-scoring board of Word Hunt possible?** This is what Hexhunt is about, but on a hexagonal board to avoid the use of existing Word Hunt solvers online[^2]. Here is a complete problem description:
+A natural question arose: **what’s the highest-scoring board of Word Hunt possible?** This is what Hexhunt is about, but on a hexagonal board to avoid the use of existing Word Hunt solvers online[^1]. Here is a complete problem description:
 
 ---
 
-- *A Hexhunt board is a symmetric 19-hexagon grid of letters*
+*A Hexhunt board is a symmetric 19-hexagon grid of letters*
 - *Words can be formed on the board by connecting adjacent letters, without repetition*
-- *Valid words must be included in the ENABLE1 corpus[^1]*
+- *Valid words must be included in the ENABLE1 corpus[^2]*
 - *A Hexhunt board's score is the sum of the lengths of all unique words that can be formed on the board*
 
 
@@ -92,14 +92,14 @@ By "single-letter modification," I mean randomly taking one of the 19 spots on t
 
 Repeatedly doing this method on different random starting boards can consistently give scores in the 3000s in just a few minutes to hours of computing time.
 
-### Simulated Annealing
-
-We can think of the space of possible boards as a set of $26^{19}$ nodes on a graph, with edges connecting adjacent boards, for some definition of adjacent. For example, in the previous approach, we defined adjacent as "differing by a single-letter modification," creating a [Hamming graph](https://en.wikipedia.org/wiki/Hamming_graph). This is a graph where adjacent nodes are off by a Hamming distance of 1. We then performed a (random) walk on this graph, increasing our score with each movement.
+As a sidenote, we can think of the space of possible boards as a set of $26^{19}$ nodes on a graph, with edges connecting adjacent boards, for some definition of adjacent. For example, in the previous approach, we defined adjacent as "differing by a single-letter modification," creating a [Hamming graph](https://en.wikipedia.org/wiki/Hamming_graph). This is a graph where adjacent nodes are off by a Hamming distance of 1. We then performed a (random) walk on this graph, increasing our score with each movement.
 
 <figure>
     <img src="images/hexhunt_hamming.png" alt="Hamming Graphs" class="blog-image" style="width: 70%;" />
-    <figcaption style="width: 85%; margin: auto;"> Examples of small Hamming graphs H(d, q), which are graphs on sequences of length d in base q, with edges between nodes of Hamming distance 1. Our hill climbing and simmulated annealing approaches do random walks on H(19, 26). Image from <a href="https://mathworld.wolfram.com/HammingGraph.html">Wolfram Mathworld</a>. </figcaption>
+    <figcaption style="width: 85%; margin: auto;"> Examples of small Hamming graphs H(d, q), which are graphs on sequences of length d in base q, with edges between nodes of Hamming distance 1. Our hill climbing and simmulated annealing approaches do random walks on H(19, 26), or H(19, n) if we want to only consider a list of n&lt;26 common letters. Image from <a href="https://mathworld.wolfram.com/HammingGraph.html">Wolfram Mathworld</a>. </figcaption>
 </figure>
+
+### Simulated Annealing
 
 The main issue with naive hill climbing is that we get stuck in local maxima. Often, no single-letter modification yields a better score, but swapping two letters on the board or making some other 2-letter or 3-letter modification does. 
 
@@ -140,7 +140,7 @@ Apparently, some people also had success with genetic algorithms. These repeated
 
 ## Conclusion
 
-In the end, we got 1600 total submissions for this puzzle (solvers can submit multiple times). Out of 1500 people who accessed the HackTimes page and attempted puzzles, 30 people achieved the same high score of **4064** with this board or one of its rotations/reflections:
+In the end, we got 1600 total submissions for this puzzle (solvers can submit multiple times for higher scores). Out of 1500 people who accessed the HackTimes page and attempted puzzles, 100 got a score higher than 2000, and 30 of those then the same high score of **4064** with this board or one of its rotations/reflections:
 <img src="images/hexhunt_high.png" alt="4064" class="blog-image" style="width: 50%;" />
 
 There's likely no good way to prove mathematically that this is the highest scoring board without essentially doing an exhaustive search, but from the sheer number of people who tried their various techniques with many hundreds of hours of computation, and achieved the same highest score, we can be extremely confident that 4064 is the maximum possible Hexhunt score.
@@ -352,6 +352,6 @@ if __name__ == "__main__":
         print(f"Optimized score: {optimized_score}\n\n")
 ```
 
-[^1]: You might wonder what counts as a valid word. Some people figured out the wordlist by testing popular corpora like SOWPODS and TWL, etc. until finding a match. Others realized that the first characters of the puzzle's cryptic description, "Explore Novel Arrangements By Linking Elements 1-by-1" spell out [ENABLE1](https://github.com/dolph/dictionary/blob/master/enable1.txt), a corpus used for many word games, including Word Hunt.
+[^1]: There are many Github repos and sites online with automatic solvers for Word Hunt, but we also later discovered that this problem of maximizing the highest score had already been considered for the related game of Boggle [here](https://digitalcommons.butler.edu/cgi/viewcontent.cgi?article=2722&context=wordways) and [here](http://www.robertgamble.net/2016/01/a-programmers-analysis-of-boggle.html). I hadn't come across this despite a lot of searching before I made the puzzle since I hadn't searched using the keyword "Boggle." It's always unfortunate to discover that the problem you've been working on has already been solved and published. Nevertheless, I'm pretty sure no one has tried the hexagonal board before, and that none or close to none of the contestants got spoiled on any solving techniques from looking online. The highest scoring Word Hunt board using our scoring rules and ENABLE1 is likely this one, with a score of 6294: ``` S L P S \ E A I E \ R N T R \ G E S O ```
 
-[^2]: There are many Github repos and sites online with automatic solvers for Word Hunt, but we also later discovered that this problem of maximizing the highest score had already been considered for the related game of Boggle [here](https://digitalcommons.butler.edu/cgi/viewcontent.cgi?article=2722&context=wordways) and [here](http://www.robertgamble.net/2016/01/a-programmers-analysis-of-boggle.html). I hadn't come across this despite a lot of searching before I made the puzzle since I hadn't searched using the keyword "Boggle." It's always unfortunate to discover that the problem you've been working on has already been solved and published. Nevertheless, I'm pretty sure no one has tried the hexagonal board before, and that none or close to none of the contestants got spoiled on any solving techniques from looking online. The highest scoring Word Hunt board using our scoring rules and ENABLE1 is likely this one, with a score of 6294: ``` S L P S \ E A I E \ R N T R \ G E S O ```
+[^2]: You might wonder what counts as a valid word. Some people figured out the wordlist by testing popular corpora like SOWPODS and TWL, etc. until finding a match. Others realized that the first characters of the puzzle's cryptic description, "Explore Novel Arrangements By Linking Elements 1-by-1" spell out [ENABLE1](https://github.com/dolph/dictionary/blob/master/enable1.txt), a corpus used for many word games, including Word Hunt.
