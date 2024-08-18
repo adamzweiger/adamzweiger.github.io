@@ -150,6 +150,7 @@ There's likely no good way to prove mathematically that this is the highest scor
 
 **Evaluation:** <a id="eval"></a>
 ```
+# evaluation.py
 class TrieNode:
     def __init__(self):
         self.children = {}
@@ -228,11 +229,12 @@ def score_board(word_scores):
 **Simulated Annealing:** <a id="SA"></a>
 
 ```
+# simulated_annealing.py
 import os
 from collections import defaultdict
 import random
 import math
-from checker import load_wordlist, solve_board, convert_board
+from evaluation import load_wordlist, solve_board, convert_board
 
 ALLOWED_LETTERS = "AEIOUBCDFGHLMNPRSTY"
 
