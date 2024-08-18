@@ -71,6 +71,10 @@ html, body {
 }
 
 @media (max-width: 768px) {
+  .projects {
+    padding: 10px;
+  }
+
   .project-item {
     flex-direction: column;
   }
@@ -82,5 +86,8 @@ html, body {
 
   .project-info {
     width: 100%;
+  }
+  .project-description {
+    width: 94%;
   }
 }

@@ -1,9 +1,9 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 
-function Navbar() {
+function Navbar({ show }) {
   return (
-    <nav className="navbar">
+    <nav className={`navbar ${show ? 'show' : 'hide'}`}>
       <div className="navbar-container">
         <NavLink to="/" className="navbar-logo">
           Adam Zweiger
@@ -20,8 +20,8 @@ function Navbar() {
             </NavLink>
           </li>
           <li className="nav-item">
-            <NavLink to="/writing" className={({ isActive }) => "nav-link" + (isActive ? " active" : "")}>
-              Writing
+            <NavLink to="/blog" className={({ isActive }) => "nav-link" + (isActive ? " active" : "")}>
+              Blog
             </NavLink>
           </li>
           <li className="nav-item">

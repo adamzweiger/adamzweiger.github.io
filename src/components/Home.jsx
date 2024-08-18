@@ -20,7 +20,7 @@ function Home() {
           <p>
             Hey! I'm an undergrad at MIT pursuing a degree in CS (Course 6-3).
             My background includes studying pure math and competing in math, physics, and computing olympiads during high school.
-            I've also interned as a software/ML engineer in biotech and big tech.
+            I've also interned as a software/ML engineer at Probius and AWS.
             My current focus is on algorithms and AI systems, and I'm seeking research opportunities in these areas.
             I'm also a part of the HackMIT organizing team, hoping to support tech innovation.
             Outside of academics, I love bouldering, badminton, and tennis.

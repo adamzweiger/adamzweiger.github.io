@@ -6,9 +6,9 @@ import fs from 'fs'
 import path from 'path'
 
 const excludeFiles = [
-  'posts/hello-world.md',
+  // 'posts/hello-world.md',
   'posts/lessons-from-aws.md',
-  'posts/creating-and-defeating-hexhunt.md'
+  // 'posts/creating-and-defeating-hexhunt.md'
 ]
 
 const getAllFiles = (dirPath, arrayOfFiles = []) => {

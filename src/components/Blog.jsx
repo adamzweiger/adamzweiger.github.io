@@ -19,34 +19,34 @@ function BlogPost({ title, description, date, readingTime }) {
   );
 }
 
-function Blog() {
+function Blog() { // need to stop it from 404ing before seeing the actual post. figure out how to display md.
   const blogPosts = [
+    {
+      title: "Creating and Defeating Hexhunt",
+      description: "Optimizing a word game: Explaining solutions to my HackMIT admissions puzzle.",
+      date: "2024-08-17",
+      readingTime: 16
+    },
     // {
-    //   title: "Creating and Defeating Hexhunt",
-    //   description: "In search of the best Word Hunt board. Explaining solutions to my HackMIT admissions puzzle.",
+    //   title: "Lessons From AWS",
+    //   description: "What I learned from my internship at the cloud giant.",
     //   date: "2024-08-20",
     //   readingTime: 10
     // },
-    // {
-    // title: "Lessons From My Time at AWS",
-    // description: "What I learned from the cloud giant.",
-    // date: "2024-08-20",
-    // readingTime: 10
-    // },
-    // {
-    //   title: "Hello World",
-    //   description: "My first post!",
-    //   date: "2024-07-23",
-    //   readingTime: 6
-    // },
+    {
+      title: "Hello World",
+      description: "My first blog post! On writing and originality.",
+      date: "2024-08-01",
+      readingTime: 4
+    }
   ];
 
   return (
     <div className="blog">
-      <h2>Writing</h2>
-      <div>
+      <h2>Blog</h2>
+      {/* <div>
         Coming soon!
-      </div>
+      </div> */}
       <div className="blog-list">
         {blogPosts.map((post, index) => (
           <BlogPost key={index} {...post} />
@@ -57,5 +57,3 @@ function Blog() {
 }
 
 export default Blog;
-
-
