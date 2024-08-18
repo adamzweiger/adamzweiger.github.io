@@ -11,6 +11,7 @@ If you would like to try the puzzle first, visit [HackTimes](https://hacktimes.h
 
 <img src="images/hexhunt_board.png" alt="Hexhunt" class="blog-image" style="width: 100%;" />
 
+
 ## Deciphering the Puzzle
 
 At first glance, the puzzle's objective isn't clear. The page allows for inputting 19 letters (A-Z) and then outputs a word and a score. The goal, presumably, is to maximize this score. After some experimentation, a few observations emerge:
