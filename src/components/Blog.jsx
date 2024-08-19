@@ -37,7 +37,7 @@ function Blog() { // need to stop it from 404ing before seeing the actual post. 
       title: "Hello World",
       description: "My first blog post! On writing and originality.",
       date: "2024-08-01",
-      readingTime: 4
+      readingTime: 3
     }
   ];
 

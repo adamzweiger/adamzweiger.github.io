@@ -15,7 +15,6 @@ function App() {
   const [showNavbar, setShowNavbar] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
 
-
   const controlNavbar = () => {
     if (location.pathname.startsWith('/posts/')) {
       if (window.scrollY > lastScrollY) {

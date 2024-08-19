@@ -19,7 +19,7 @@ function BlogPostContent() {
   useEffect(() => {
     setIsLoading(true);
     setError(null);
-    fetch(`/posts/${slug}.md`)
+    fetch(`/blogposts/${slug}.md`)
       .then(response => {
         if (!response.ok) {
           throw new Error('Page Not Found');
@@ -58,15 +58,22 @@ function BlogPostContent() {
     return <NotFound />;
   }
 
+  const components = {
+    img: ({node, ...props}) => {
+      const src = props.src.startsWith('images/') 
+        ? `/blogposts/${props.src}` 
+        : `/blogposts/images/${props.src}`;
+      return <img {...props} src={src} className="blog-image" alt={props.alt || ''} />;
+    }
+  };
+
   return (
     <div className="blog-post-wrapper">
       <div className="blog-post-content">
         <ReactMarkdown 
           remarkPlugins={[remarkGfm, remarkMath, [remarkFootnotes, {inlineNotes: true}]]}
           rehypePlugins={[rehypeKatex, rehypeRaw]}
-          components={{
-            img: ({node, ...props}) => <img {...props} className="blog-image" />
-          }}
+          components={components}
         >
           {content}
         </ReactMarkdown>
