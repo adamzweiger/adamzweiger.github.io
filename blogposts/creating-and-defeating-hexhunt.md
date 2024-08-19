@@ -14,7 +14,7 @@ If you would like to try the puzzle first, visit [HackTimes](https://hacktimes.h
 
 ## Deciphering the Puzzle
 
-At first glance, the puzzle's objective isn't clear. The page allows for inputting 19 letters (A-Z) and then outputs a word and a score. The goal, presumably, is to maximize this score. After some experimentation, a few observations emerge:
+At first glance, the puzzle's objective isn't clear. The page allows for inputting 19 letters (A-Z) and then outputs a word and a score. The goal, presumably, is to maximize this score. After some experimentation, we notice a few observations:
 - Orientation of the board doesn't matter
 - You can get the same outputted word with different scores and different outputted words with the same score
 - The outputted word appears to be the longest word that can be produced by connecting adjacent letters without repeats
@@ -34,8 +34,8 @@ A natural question arose: **what’s the highest-scoring board of Word Hunt poss
 
 ---
 
-*A Hexhunt board is a symmetric 19-hexagon grid of letters*
-- *Words can be formed on the board by connecting adjacent letters, without repetition*
+- *A Hexhunt board is a symmetric 19-hexagon grid of letters*
+- *Words can be formed on the board by connecting adjacent letters without repetition*
 - *Valid words must be included in the ENABLE1 corpus[^2]*
 - *A Hexhunt board's score is the sum of the lengths of all unique words that can be formed on the board*
 
@@ -141,7 +141,7 @@ Apparently, some people also had success with genetic algorithms. These repeated
 
 ## Conclusion
 
-In the end, we got 1552 total submissions for this puzzle (solvers can submit multiple times for higher scores). Out of 1200 people who accessed the HackTimes page and attempted puzzles, 131 got a Hexhunt score higher than 2000. An impressive 28 of them got the same high score of **4064** with this board or one of its rotations/reflections:
+In the end, we got 1259 total submissions for this puzzle (solvers can submit multiple times for higher scores). Out of 1152 people who accessed the HackTimes page and attempted puzzles, 128 got a Hexhunt score higher than 2000. An impressive 28 of them got the same high score of **4064** with this board or one of its rotations/reflections:
 <img src="images/hexhunt_high.png" alt="4064" class="blog-image" style="width: 50%;" />
 
 There's likely no good way to prove mathematically that this is the highest scoring board without essentially doing an exhaustive search, but from the sheer number of people who tried their various techniques with many hundreds of hours of computation, and achieved the same highest score, we can be extremely confident that 4064 is the maximum possible Hexhunt score.
